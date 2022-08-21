@@ -32,10 +32,10 @@ def is_palindrome(phrase):
 
     phrase_upper = phrase.upper().replace(' ', '')
     phrase_reversed = phrase_upper[::-1]
-    if phrase_upper == phrase_reversed:
-        return True
-    else:
-        return False
+    return phrase_upper == phrase_reversed:
+    #     return True
+    # else:
+    #     return False
 
 
 

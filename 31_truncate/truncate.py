@@ -18,26 +18,28 @@ def truncate(phrase, n):
         >>> truncate('Cool', 1)
         'Truncation must be at least 3 characters.'
 
-        >>> truncate("Woah", 4)
-        'W...'
+        >>> truncate("Woah", 4) 5 wo... 6 woa... 7 woah...
+         'W...'
 
         >>> truncate("Woah", 3)
         '...'
     """
     
-    # make string into list
-    phrase_list =[char for char in phrase]
+    # # make string into list
+    # phrase_list =[char for char in phrase]
 
     # check if n is less than 3
     if n < 3:
         return 'Truncation must be at least 3 characters.'
     # check if length of list is smaller than n
-    if len(phrase_list) < n:
-        return ''.join(phrase_list)
+    if n > len(phrase) + 2:
+        return phrase
+        # this is the example  >>> truncate("Yo", 100) => 'Yo'
     # check if length of list is the same or longer than n
-    if len(phrase_list) >= n:
-        phrase_list[n-3:] = ['...']
-        return ''.join(phrase_list)
+    # if len(phrase_list) >= n:
+    #     phrase_list[n-3:] = ['...']
+    #     return ''.join(phrase_list)
+    return phrase[:n - 3] + '...'
         
 
    

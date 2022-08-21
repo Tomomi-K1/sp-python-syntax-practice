@@ -26,47 +26,37 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
         >>> calculate('foo', 2, 3)
         
     """
-    def add(a, b):
-        return a + b
+    # def add(a, b):
+    #     return a + b
     
-    def subtract(a, b):
-        return a - b
+    # def subtract(a, b):
+    #     return a - b
     
-    def multiply(a, b):
-        return a * b
+    # def multiply(a, b):
+    #     return a * b
 
-    def divide(a, b):
-        return a / b
+    # def divide(a, b):
+    #     return a / b
     
     if operation == 'add':
-        answer = add(a, b)
-        if make_int == True:
-            return f'{message} {int(answer)}'
-        else:
-            return f'{message} {answer}'
-
+        res = a + b
+       
     elif operation == 'subtract':
-        answer = subtract(a, b)
-        if make_int == True:
-            return f'{message} {int(answer)}'
-        else:
-            return f'{message} {answer}'
-
+        res = a - b
+       
     elif operation == 'multiply':
-        answer = multiply(a, b)
-        if make_int == True:
-            return f'{message} {int(answer)}'
-        else:
-            return f'{message} {answer}'
+        res = a * b
 
     elif operation == 'divide':
-        answer = divide(a, b)
-        if make_int == True:
-            return f'{message} {int(answer)}'
-        else:
-            return f'{message} {answer}'
+        answer = a / b
+
+    else: 
+        return
+        # this will return "None"
+
+    if make_int:
+        res = int(res)
     
-    else:
-        return None
-    
+    return f'{message} {res}'
+
 

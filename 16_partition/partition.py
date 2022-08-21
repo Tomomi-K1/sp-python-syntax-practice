@@ -23,3 +23,17 @@ def partition(lst, fn):
     b = []
     [a.append(item) if fn(item) is True else b.append(item) for item in lst]
     return [a, b]
+
+
+    # Best solution:
+
+    # true_list = []
+    # false_list = []
+
+    # for val in lst:
+    #     if fn(val):
+    #         true_list.append(val)
+    #     else:
+    #         false_list.append(val)
+
+    # return [true_list, false_list]

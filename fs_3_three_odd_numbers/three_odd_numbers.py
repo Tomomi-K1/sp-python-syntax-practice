@@ -14,12 +14,9 @@ def three_odd_numbers(nums):
         False
     """
     
-    for x in range(len(nums)):
-        if x+1 == len(nums)-2:
-            break
+    for x in range(len(nums)-2):
         if (nums[x]+nums[x+1]+nums[x+2]) % 2 !=0:
             return True
-            break
     
     return False
 

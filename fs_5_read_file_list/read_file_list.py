@@ -22,3 +22,12 @@ def read_file_list(filename):
     with open (filename, 'r') as f:
         for line in f.readlines():
             print(f'- {line}', end ='')
+
+    # don't need to put 'r' for reading file. it's a default if you don't specify.
+
+    # springbaord answer
+    #    with open(filename) as f:
+    #     for line in f:
+    #         # remove newline at end of line!
+    #         line = line.strip()
+    #         print(f"- {line}")

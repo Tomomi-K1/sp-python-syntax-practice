@@ -14,10 +14,12 @@ def extract_full_names(people):
         >>> extract_full_names(names)
         ['Ada Lovelace', 'Grace Hopper']
     """
-    fullname_list = []
-    for name in people:
-        first_name =name.get('first')
-        last_name =name.get('last')
-        fullname_list.append(f'{first_name} {last_name}')
-    return fullname_list
+    # fullname_list = []
+    # for name in people:
+    #     first_name =name.get('first')
+    #     last_name =name.get('last')
+    #     fullname_list.append(f'{first_name} {last_name}')
+    # return fullname_list
+
+    return [f'{person['first']} {person['last']}' for person in people]
         

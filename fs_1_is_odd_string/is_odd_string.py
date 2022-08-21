@@ -29,10 +29,21 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
-    word.lower()
-    sum = 0 
-    for chr in word:
-        position = ord(chr)-ord('a') + 1
-        sum += position
-    return sum % 2 != 0
+    # word.lower()
+    # sum = 0 
+    # for chr in word:
+    #     position = ord(chr)-ord('a') + 1
+    #     sum += position
+    # return sum % 2 != 0
+
+    # springboard solution
+    # to find the char position, we'll change it's ordinal ASCII number into
+    # a 1-based number ("a" = 1, "b" = 2). To do that, let's subtract
+    # this from it
+
+    base = ord('a') -1
+
+    total = sum((ord(chr) - base) for chr in word.lower())
+
+    return total % 2 == 1
     

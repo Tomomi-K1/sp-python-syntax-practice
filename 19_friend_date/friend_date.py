@@ -16,14 +16,25 @@ def friend_date(a, b):
         >>> friend_date(sauron, gandalf)
         True
     """
-    boolean = []
-    for idx in range(0, len(a)-1):
-        boolean.append(a[2][idx] in b[2])
+    # boolean = []
+    # for idx in range(0, len(a)-1):
+    #     boolean.append(a[2][idx] in b[2])
     
-    if True in boolean:
+    # if True in boolean:
+    #     return True
+    # else:
+    #     return False
+
+    if set(a[2] & set(b[2])): 
+    # getting intersection of sets, if intersection exists
         return True
     else:
         return False
+
+    # or 
+       # return bool(set(a[2] & set(b[2])
+
+
 
             
         

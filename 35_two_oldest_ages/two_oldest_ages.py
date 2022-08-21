@@ -22,6 +22,11 @@ def two_oldest_ages(ages):
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
     set_of_ages = set(ages)
-    sorted_list = sorted(list(set_of_ages))
-    return ( sorted_list[-2], sorted_list[-1]) 
+    # sorted_list = sorted(list(set_of_ages))
+    # return ( sorted_list[-2], sorted_list[-1]) 
+    
+    oldest = sorted(set_of_ages)[-2:] 
+    # [-2:] で最後から2番目の数値から最後までの数字をリストから抜き出す
+    return tuple(oldest)
+    # 抜き出した二つのリストのエレメントをTupleに変換
     
